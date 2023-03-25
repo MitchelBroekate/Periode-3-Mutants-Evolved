@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    // Movement
     public float hor;
     public float ver;
     public float moveSpeed;
     public Vector3 moveDirection;
-    public float jumpSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // movement
         hor = Input.GetAxis("Horizontal");
         ver = Input.GetAxis("Vertical");
 
