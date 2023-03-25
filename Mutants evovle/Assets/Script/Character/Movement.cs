@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public float ver;
     public float moveSpeed;
     public Vector3 moveDirection;
+    public float jumpSpeed;
 
     // Start is called before the first frame update
     void Start()
