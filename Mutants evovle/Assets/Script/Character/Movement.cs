@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float ver;
     public float moveSpeed;
     public Vector3 moveDirection;
+    public Conversationmanager conman;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,10 @@ public class Movement : MonoBehaviour
         moveDirection.x = hor;
         moveDirection.z = ver;
 
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        if (conman.conbool == false)
+        {
+            transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        }
+        
     }
 }
