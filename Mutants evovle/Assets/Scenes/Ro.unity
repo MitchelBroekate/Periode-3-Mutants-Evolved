@@ -543,11 +543,16 @@ MonoBehaviour:
   conbool: 0
   conend: 0
   questint: 0
+  questionnumber: 0
+  questionfactor: 0
+  posint: 0
+  negint: 0
   pos: {fileID: 1705460743}
   neg: {fileID: 601492410}
+  npcint: 0
   npc: {fileID: 2064556756}
   quest: {fileID: 381565735}
-  conversation: {fileID: 11400000, guid: 9a4565550b61c6b47a6310bbbfb29b3e, type: 2}
+  conversation: {fileID: 11400000, guid: 0251a7a633c0cda469f2ddd95ffd1e1c, type: 2}
   buttons:
   - {fileID: 1289499722}
   - {fileID: 1155323012}

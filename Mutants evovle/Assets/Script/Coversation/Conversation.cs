@@ -5,6 +5,6 @@ using UnityEngine;
 public class Conversation : ScriptableObject
 {
     public string[] questions;
-    public string[] anwsers;
     public string[] quests;
+    public string[] anwsers;
 }

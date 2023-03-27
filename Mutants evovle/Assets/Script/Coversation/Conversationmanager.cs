@@ -9,8 +9,13 @@ public class Conversationmanager : MonoBehaviour
     public bool conbool;
     public bool conend;
     public int questint;
+    public int questionnumber;
+    public int questionfactor;
+    public int posint;
+    public int negint;
     public TMP_Text pos;
     public TMP_Text neg;
+    public int npcint;
     public TMP_Text npc;
     public TMP_Text quest;
     public Conversation conversation;
@@ -20,21 +25,30 @@ public class Conversationmanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        posint = 0;
+        negint = 1;
+        npcint = 0;
+        questionnumber = 0;
+        questionfactor = 2;
         questint = 0;
         constart = false;
         conbool = false;
-        npc.text = conversation.questions[0];
-        pos.text = conversation.anwsers[0];
-        neg.text = conversation.anwsers[1];
         pressesc.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        npc.text = conversation.questions[npcint];
+        pos.text = conversation.anwsers[posint];
+        neg.text = conversation.anwsers[negint];
         quest.text = conversation.quests[questint];
         if (conbool == true && constart == false)
         {
+            for (var i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].SetActive(false);
+            }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 conbool = false;
@@ -45,21 +59,23 @@ public class Conversationmanager : MonoBehaviour
     }
     public void Pos()
     {
-        npc.text = conversation.questions[1];
-        After();    
+        posint += questionfactor;
+        negint += questionfactor;
+        questionfactor *= 2;
+        
     }
     public void Neg()
     {
-        npc.text = conversation.questions[2];
-        After();
+        posint += questionfactor;
+        negint += questionfactor;
+        questionfactor *= 2;
+        questionfactor += 1;
+        
     }
     public void After()
     {
         pressesc.SetActive(true);
-        for (var i = 0; i < buttons.Length; i++)
-        {
-            buttons[i].SetActive(false);
-        }
+       
         constart = false;
     }
 }
