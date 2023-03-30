@@ -10,11 +10,12 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     public Vector3 moveDirection;
     public Conversationmanager conman;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,5 +33,13 @@ public class Movement : MonoBehaviour
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
         }
         
+        if (moveDirection != Vector3.zero)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
     }
 }
