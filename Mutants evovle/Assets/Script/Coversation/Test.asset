@@ -13,12 +13,21 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   questions:
-  - Hoi hoe gaat het?
-  - Lekker man
-  - Jammer man
+  - Goed en met jouw?
+  - Ben je op zoek naar de doctor?
+  - denk er aan god houdt van jouw
+  - Hier neem de keycard hij is door de deur
+  - Hier neem de keycard dan kan je het gebouw door zoeken
+  - geen probleem hier ik geef je gratis een keycard
+  - Inshallah hij houdt van jouw
   quests:
   - Talk to the Receptionist
   - Quests done
   anwsers:
-  - Goed
-  - Slecht
+  - Hey hoe gaat het
+  - Goed!
+  - Slecht..
+  - Ik zoek hem inderdaad
+  - Nee iemand anders
+  - ja dankjewel voor de hulp
+  - nee sorry

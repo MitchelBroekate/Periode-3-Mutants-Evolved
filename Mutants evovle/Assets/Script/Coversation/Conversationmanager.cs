@@ -8,7 +8,12 @@ public class Conversationmanager : MonoBehaviour
     public bool constart;
     public bool conbool;
     public bool conend;
+    public bool confirst;
     public int questint;
+    public int posind;
+    public int negind;
+    public int questionind;
+    public int limit;
     public TMP_Text pos;
     public TMP_Text neg;
     public TMP_Text npc;
@@ -20,20 +25,46 @@ public class Conversationmanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        posind = 0;
+        negind = 0;
         questint = 0;
         constart = false;
         conbool = false;
         pressesc.SetActive(false);
-        npc.text = conversation.questions[0];
-        pos.text = conversation.anwsers[0];
-        neg.text = conversation.anwsers[1];
+        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (confirst == false)
+        {
+            npc.text = conversation.questions[questionind];
+           
+        }
+        
+        pos.text = conversation.anwsers[posind];
+        neg.text = conversation.anwsers[negind];
         quest.text = conversation.quests[questint];
+
+        if (confirst == true)
+        {
+            npc.text = conversation.anwsers[posind];
+            for (var i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].SetActive(false);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                confirst = false;
+                Pos();
+                for (var i = 0; i < buttons.Length; i++)
+                {
+                    buttons[i].SetActive(true);
+                }
+            }
+        }
         if (conbool == true && constart == false)
         {
             
@@ -46,13 +77,33 @@ public class Conversationmanager : MonoBehaviour
     }
     public void Pos()
     {
-        npc.text = conversation.questions[1];
-        After();
+        questionind = posind;
+        posind *= 2;
+        posind += 1;
+        negind = posind;
+        negind += 1;
+        if (posind > limit)
+        {
+            After();
+        }
+        Afterstart();
     }
     public void Neg()
     {
-        npc.text = conversation.questions[2];
-        After();
+        questionind = negind;
+        negind *= 2; 
+        negind += 2;
+        posind = negind;
+        posind -= 1;
+        if (posind > limit)
+        {
+            After();
+        }
+        Afterstart();
+    }
+    public void Afterstart()
+    {
+        confirst = false;
     }
     public void After()
     {
@@ -62,6 +113,8 @@ public class Conversationmanager : MonoBehaviour
             buttons[i].SetActive(false);
         }
         constart = false;
+        posind = 0;
+        negind = 0;
     }
 }
 

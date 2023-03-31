@@ -22,11 +22,12 @@ public class Raycast : MonoBehaviour
             {
                 if (hit.transform.tag == "Conversation")
                 {
-                    if (Input.GetMouseButton(0))
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
                         conman.constart = true;
                         conman.conbool = true;
                         conman.conend = true;
+                        conman.confirst = true;
 
                     }
                 }
