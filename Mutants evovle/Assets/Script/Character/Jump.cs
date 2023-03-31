@@ -7,10 +7,12 @@ public class Jump : MonoBehaviour
     // Jump
     public Rigidbody rb;
     public bool canJump = true;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,16 @@ public class Jump : MonoBehaviour
             rb.velocity = new Vector3(0, 5, 0);
             canJump = false;
         }
+
+        // Animation
+        if (canJump != true)
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", false);
+        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -30,5 +42,7 @@ public class Jump : MonoBehaviour
         {
             canJump = true;
         }
+
+        
     }
 }

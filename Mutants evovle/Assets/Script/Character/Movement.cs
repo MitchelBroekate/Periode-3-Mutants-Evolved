@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     public Vector3 moveDirection;
     public Conversationmanager conman;
+    
+    // Animation
     public Animator animator;
 
     // Start is called before the first frame update
@@ -33,6 +35,7 @@ public class Movement : MonoBehaviour
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
         }
         
+        // Animation
         if (moveDirection != Vector3.zero)
         {
             animator.SetBool("IsMoving", true);
