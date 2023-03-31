@@ -15,10 +15,10 @@ MonoBehaviour:
   questions:
   - Goed en met jouw?
   - Ben je op zoek naar de doctor?
-  - denk er aan god houdt van jouw
+  - Denk er aan god houdt van jouw
   - Hier neem de keycard hij is door de deur
   - Hier neem de keycard dan kan je het gebouw door zoeken
-  - geen probleem hier ik geef je gratis een keycard
+  - Geen probleem hier ik geef je gratis een keycard
   - Inshallah hij houdt van jouw
   quests:
   - Talk to the Receptionist
@@ -30,4 +30,4 @@ MonoBehaviour:
   - Ik zoek hem inderdaad
   - Nee iemand anders
   - ja dankjewel voor de hulp
-  - nee sorry
+  - Nee sorry
