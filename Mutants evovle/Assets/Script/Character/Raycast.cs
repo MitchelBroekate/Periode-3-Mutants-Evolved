@@ -26,7 +26,7 @@ public class Raycast : MonoBehaviour
                     {
                         conman.constart = true;
                         conman.conbool = true;
-                        
+
                         conman.confirst = true;
 
                     }
