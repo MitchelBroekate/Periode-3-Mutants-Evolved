@@ -21,7 +21,7 @@ public class Conversationmanager : MonoBehaviour
     public Conversation conversation;
     public GameObject[] buttons;
     public GameObject pressesc;
-   
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,7 +72,16 @@ public class Conversationmanager : MonoBehaviour
             {
                 conbool = false;
                 questint += 1;
+                conend = true;
             }
+        }
+        if(conbool == true)
+        {
+            animator.SetBool("conbool", true);
+        }
+        if (conend == true)
+        {
+            animator.SetBool("conend", true);
         }
     }
     public void Pos()
