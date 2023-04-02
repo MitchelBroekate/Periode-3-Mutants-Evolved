@@ -9,11 +9,12 @@ public class Raycast : MonoBehaviour
     public GameObject keyCard;
     public bool isKeyInInv;
     public Animator animator;
+    public Collider door;
     
     // Start is called before the first frame update
     void Start()
     {
-     
+        keyCard.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class Raycast : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         animator.SetBool("Dooropen", true);
+                        door.enabled = false;
                     }
                 }
             }

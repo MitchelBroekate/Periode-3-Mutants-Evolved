@@ -22,6 +22,7 @@ public class Conversationmanager : MonoBehaviour
     public GameObject[] buttons;
     public GameObject pressesc;
     public Animator animator;
+    public Raycast raycast;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +74,7 @@ public class Conversationmanager : MonoBehaviour
                 conbool = false;
                 questint += 1;
                 conend = true;
+                raycast.keyCard.SetActive(true);
             }
         }
         if(conbool == true)
