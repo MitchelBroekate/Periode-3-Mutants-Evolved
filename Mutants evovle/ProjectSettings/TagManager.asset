@@ -7,6 +7,8 @@ TagManager:
   - floor
   - wall
   - Conversation
+  - keycard
+  - keyslot
   layers:
   - Default
   - TransparentFX
