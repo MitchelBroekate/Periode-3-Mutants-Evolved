@@ -39,6 +39,7 @@ public class Raycast : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         animator.SetBool("Dooropen", true);
+                        //RO
                         door.enabled = false;
                     }
                 }
