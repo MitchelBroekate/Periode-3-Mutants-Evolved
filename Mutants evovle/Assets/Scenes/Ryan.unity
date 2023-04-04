@@ -545,12 +545,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54153271c947f5242a26f15c6a9c2e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conman: {fileID: 931770068}
-  cam: {fileID: 1850723434}
-  concam: {fileID: 1224093421}
+  conman: {fileID: 0}
+  cam: {fileID: 0}
+  concam: {fileID: 0}
   RotationSpeed: 1
-  Target: {fileID: 148374639}
-  Player: {fileID: 434480804}
+  Target: {fileID: 0}
+  Player: {fileID: 0}
   mouseX: 0
   mouseY: 0
 --- !u!1 &481850332
@@ -1925,7 +1925,6 @@ GameObject:
   - component: {fileID: 1850723433}
   - component: {fileID: 1850723436}
   - component: {fileID: 1850723437}
-  - component: {fileID: 1850723438}
   - component: {fileID: 1850723439}
   m_Layer: 0
   m_Name: Main Camera
@@ -1993,7 +1992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850723432}
   m_LocalRotation: {x: 0.10290632, y: -0, z: -0, w: 0.99469113}
-  m_LocalPosition: {x: 0, y: 0.232, z: -2.4840002}
+  m_LocalPosition: {x: 0, y: 0.151, z: -2.654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2053,18 +2052,6 @@ MonoBehaviour:
   Player: {fileID: 434480804}
   mouseX: 0
   mouseY: 0
---- !u!114 &1850723438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850723432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 174071b1622d9ac44a830cf89ed835ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1850723439
 MonoBehaviour:
   m_ObjectHideFlags: 0
