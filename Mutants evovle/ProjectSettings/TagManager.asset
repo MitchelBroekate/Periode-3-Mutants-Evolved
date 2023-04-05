@@ -9,6 +9,10 @@ TagManager:
   - Conversation
   - keycard
   - keyslot
+  - Red1
+  - Green2
+  - Yellow3
+  - Blue4
   layers:
   - Default
   - TransparentFX
