@@ -10,6 +10,7 @@ public class Camera : MonoBehaviour
     public Conversationmanager conman;
     public Camera cam;
     public Camera concam;
+    
 
     //Ryan
     public float RotationSpeed = 1;
@@ -17,12 +18,14 @@ public class Camera : MonoBehaviour
     public Transform Player;
     public float mouseX;
     public float mouseY;
+    public Camera codeCam;
     // Start is called before the first frame update
     void Start()
     {
         //RO
         cam.enabled = true;
         concam.enabled = false;
+        codeCam.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

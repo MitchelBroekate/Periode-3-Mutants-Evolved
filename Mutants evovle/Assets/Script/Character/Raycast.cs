@@ -4,24 +4,27 @@ public class Raycast : MonoBehaviour
 {
     public RaycastHit hit;
     public Conversationmanager conman;
+
     public GameObject keyCard;
     public GameObject code1;
     public GameObject code2;
     public GameObject code3;
     public GameObject code4;
+
+    public bool codeRed;
+    public bool codeGreen;
+    public bool codeYellow;
+    public bool codeBlue;
     public bool isKeyInInv;
     public bool codeInInv;
+
     public Animator animator;
     public Collider door;
     
     // Start is called before the first frame update
     void Start()
     {
-        keyCard.SetActive(false);
-        code1.SetActive(true);
-        code2.SetActive(true);
-        code3.SetActive(true);
-        code4.SetActive(true); 
+        
     }
 
     // Update is called once per frame
@@ -30,12 +33,14 @@ public class Raycast : MonoBehaviour
         //Ryan
         if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
         {
+            //code
             if (hit.transform.tag == "Red1")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     code1.SetActive(false);
                     print("red1");
+                    codeRed = true;
                 }
             }
 
@@ -45,6 +50,7 @@ public class Raycast : MonoBehaviour
                 {
                     code2.SetActive(false);
                     print("green2");
+                    codeGreen = true;
                 }
             }
 
@@ -54,6 +60,7 @@ public class Raycast : MonoBehaviour
                 {
                     code3.SetActive(false);
                     print("yellow3");
+                    codeYellow = true;
                 }
             }
 
@@ -63,9 +70,27 @@ public class Raycast : MonoBehaviour
                 {
                     code4.SetActive(false);
                     print("blue4");
+                    codeBlue = true;                  
                 }
             }
 
+            if (codeRed & codeGreen & codeYellow & codeBlue == true)
+            {
+                codeInInv = true;
+            }
+
+            if (codeInInv == true)
+            {
+                if (hit.transform.tag == ("keyslot"))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+
+                    }
+                }
+            }
+
+            //keycard
             if (hit.transform.tag == "keycard")
             {
                 if (Input.GetKeyDown(KeyCode.E))
