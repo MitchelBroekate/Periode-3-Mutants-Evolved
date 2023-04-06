@@ -12,7 +12,7 @@ public void PlayGame()
 
     public void QuitGame()
     {
-        Debug.Log("uit!");
+        Debug.Log("Quit!");
         Application.Quit();
     }
 }

@@ -1,11 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.ShaderData;
 
 public class SavingAndLoading : MonoBehaviour
 {
     public Transform player;
     public Transform[] checkPoints;
+    float poss;
+    
+    public void Start()
+    {
+
+
+        if (PlayerPrefs.HasKey("xCords"))
+        {
+            poss = PlayerPrefs.GetFloat("xCords");
+            if (poss != -1.24f)
+            {
+                RestorePosition();
+            }
+        }
+        else
+        {
+            StorePosition(0);
+        }
+
+    }
 
     public void RestorePosition()
     {
