@@ -17,6 +17,7 @@ public class Raycast : MonoBehaviour
     public bool codeBlue;
     public bool isKeyInInv;
     public bool codeInInv;
+    public KeyPad keyPad;
 
     public Animator animator;
     public Collider door;
@@ -85,7 +86,7 @@ public class Raycast : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-
+                        keyPad.keypad = true;
                     }
                 }
             }

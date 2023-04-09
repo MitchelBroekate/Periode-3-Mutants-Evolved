@@ -567,12 +567,13 @@ MonoBehaviour:
   conman: {fileID: 0}
   cam: {fileID: 0}
   concam: {fileID: 0}
+  codeCam: {fileID: 0}
   RotationSpeed: 1
   Target: {fileID: 0}
   Player: {fileID: 0}
   mouseX: 0
   mouseY: 0
-  codeCam: {fileID: 0}
+  keyPad: {fileID: 0}
 --- !u!1 &481850332
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +738,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633698313}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &633698316
 Camera:
   m_ObjectHideFlags: 0
@@ -900,12 +901,13 @@ MonoBehaviour:
   conman: {fileID: 0}
   cam: {fileID: 0}
   concam: {fileID: 0}
+  codeCam: {fileID: 0}
   RotationSpeed: 1
   Target: {fileID: 0}
   Player: {fileID: 0}
   mouseX: 0
   mouseY: 0
-  codeCam: {fileID: 0}
+  keyPad: {fileID: 0}
 --- !u!1 &738416971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,6 +1221,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12, y: 0.030662436, z: 0.15}
   m_Center: {x: 0, y: 0.0003312151, z: -0.0005165674}
+--- !u!114 &1001258962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001258957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f6c505bf75714aa3e0e9778298986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keypad: 0
 --- !u!1 &1020183107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,12 +2849,13 @@ MonoBehaviour:
   conman: {fileID: 931770068}
   cam: {fileID: 1850723434}
   concam: {fileID: 1224093421}
+  codeCam: {fileID: 633698316}
   RotationSpeed: 1
   Target: {fileID: 148374639}
   Player: {fileID: 434480804}
   mouseX: 0
   mouseY: 0
-  codeCam: {fileID: 0}
+  keyPad: {fileID: 1001258962}
 --- !u!114 &1850723439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2864,6 +2880,7 @@ MonoBehaviour:
   codeBlue: 0
   isKeyInInv: 0
   codeInInv: 0
+  keyPad: {fileID: 1001258962}
   animator: {fileID: 781970794}
   door: {fileID: 0}
 --- !u!1 &1931561437
