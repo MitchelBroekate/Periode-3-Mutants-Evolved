@@ -19,6 +19,7 @@ public class Camera : MonoBehaviour
     public float mouseX;
     public float mouseY;
     public KeyPad keyPad;
+    public Animator animator;
     
     // Start is called before the first frame update
     void Start()
@@ -64,6 +65,14 @@ public class Camera : MonoBehaviour
         {
             cam.enabled = false;
             codeCam.enabled = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+
+        if (keyPad.correct == true)
+        {
+            cam.enabled = true;
+            codeCam.enabled = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
