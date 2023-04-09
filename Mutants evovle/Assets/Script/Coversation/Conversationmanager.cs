@@ -32,7 +32,7 @@ public class Conversationmanager : MonoBehaviour
         constart = false;
         conbool = false;
         pressesc.SetActive(false);
-        
+        raycast.keyCard.SetActive(false);
        
     }
 
