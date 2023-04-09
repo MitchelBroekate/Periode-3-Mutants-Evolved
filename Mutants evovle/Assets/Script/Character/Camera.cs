@@ -68,10 +68,11 @@ public class Camera : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
 
-        if (keyPad.correct == true)
+        if (keyPad.keypad == false)
         {
             cam.enabled = true;
             codeCam.enabled = false;
+            animator.SetBool("Dooropen", true);
             Cursor.lockState = CursorLockMode.Locked;
         }
     }

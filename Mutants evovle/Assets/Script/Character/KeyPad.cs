@@ -8,6 +8,7 @@ public class KeyPad : MonoBehaviour
     public bool keypad;
     public bool correct;
     public Text ans;
+    public Text exit;
     public string answer = "1234";
     public Animator animator;
 
@@ -15,7 +16,19 @@ public class KeyPad : MonoBehaviour
     void Start()
     {
         keypad = false;
-        correct = false;
+    }
+
+    void Update()
+    {
+        if (correct == true)
+        {
+            exit.text = "Press Esc";
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                keypad = false;
+            }
+        }
     }
 
     public void Number(int number)
@@ -27,8 +40,7 @@ public class KeyPad : MonoBehaviour
     {
         if (ans.text == answer)
         {
-            ans.text = "ACCEPTED";
-            animator.SetBool("Dooropen", true);
+            ans.text = "ACCEPTED";            
             correct = true;
         }
         else
