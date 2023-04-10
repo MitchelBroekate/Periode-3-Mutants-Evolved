@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Raycast : MonoBehaviour
 {
+    //Ro
     public RaycastHit hit;
     public Conversationmanager conman;
-
+    // Ryan
     public GameObject keyCard;
     public GameObject code1;
     public GameObject code2;
     public GameObject code3;
     public GameObject code4;
-
+    //Ryan
     public bool codeRed;
     public bool codeGreen;
     public bool codeYellow;
@@ -18,10 +19,11 @@ public class Raycast : MonoBehaviour
     public bool isKeyInInv;
     public bool codeInInv;
     public KeyPad keyPad;
-
+    //Ro
     public Animator animator;
     public Collider door;
-    
+    public Material keyshimmer;
+    public GameObject keyscan;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +105,7 @@ public class Raycast : MonoBehaviour
 
             if (isKeyInInv == true)
             {
+                keyscan.GetComponent<MeshRenderer>().material = keyshimmer;
                 if (hit.transform.tag == "keyslot")
                 {
                     if (Input.GetKeyDown(KeyCode.E))
