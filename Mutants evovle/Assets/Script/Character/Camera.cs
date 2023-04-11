@@ -11,6 +11,7 @@ public class Camera : MonoBehaviour
     public Camera cam;
     public Camera concam;
     public Camera codeCam;
+    public GameObject UI;
 
     //Ryan
     public float RotationSpeed = 1;
@@ -63,6 +64,7 @@ public class Camera : MonoBehaviour
 
         if (keyPad.keypad == true)
         {
+            UI.SetActive(false);
             cam.enabled = false;
             codeCam.enabled = true;
             Cursor.lockState = CursorLockMode.Confined;
@@ -70,10 +72,12 @@ public class Camera : MonoBehaviour
 
         if (keyPad.keypad == false)
         {
+            UI.SetActive(true);
             cam.enabled = true;
             codeCam.enabled = false;
-            animator.SetBool("Dooropen", true);
             Cursor.lockState = CursorLockMode.Locked;
         }
+        
+        
     }
 }

@@ -21,7 +21,7 @@ public class Jump : MonoBehaviour
         //Jump
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            rb.velocity = new Vector3(0, 5, 0);
+            rb.velocity = new Vector3(0, 4, 0);
             canJump = false;
         }
 

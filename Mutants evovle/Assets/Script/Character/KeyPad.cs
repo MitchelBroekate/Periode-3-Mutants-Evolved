@@ -24,9 +24,10 @@ public class KeyPad : MonoBehaviour
         {
             exit.text = "Press Esc";
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 keypad = false;
+                animator.SetBool("Dooropen", true);
             }
         }
     }
@@ -34,6 +35,7 @@ public class KeyPad : MonoBehaviour
     public void Number(int number)
     {
         ans.text += number.ToString();
+        print("test");
     }
 
     public void Execute()
