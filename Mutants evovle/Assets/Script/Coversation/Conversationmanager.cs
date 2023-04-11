@@ -69,7 +69,7 @@ public class Conversationmanager : MonoBehaviour
         if (conbool == true && constart == false)
         {
             
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 conbool = false;
                 questint += 1;

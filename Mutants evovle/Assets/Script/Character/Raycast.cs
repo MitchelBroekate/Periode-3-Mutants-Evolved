@@ -34,7 +34,7 @@ public class Raycast : MonoBehaviour
     void Update()
     {
         //Ryan
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 6))
         {
             //code
             if (hit.transform.tag == "Red1")
@@ -106,7 +106,7 @@ public class Raycast : MonoBehaviour
             if (isKeyInInv == true)
             {
                 keyscan.GetComponent<MeshRenderer>().material = keyshimmer;
-                if (hit.transform.tag == "keyslot")
+                if (hit.transform.tag == "Keycardscanner")
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {

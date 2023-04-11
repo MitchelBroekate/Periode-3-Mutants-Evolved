@@ -12,6 +12,7 @@ public class Camera : MonoBehaviour
     public Camera concam;
     public Camera codeCam;
     public GameObject UI;
+    public PauseMenu pause;
 
     //Ryan
     public float RotationSpeed = 1;
@@ -20,7 +21,7 @@ public class Camera : MonoBehaviour
     public float mouseX;
     public float mouseY;
     public KeyPad keyPad;
-    public Animator animator;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -43,22 +44,35 @@ public class Camera : MonoBehaviour
         
 
         //RO
-        if (conman.conbool == false)
+        if (conman.conbool == false && keyPad.keypad == false)
         {
+            UI.SetActive(true);
             cam.enabled = true;
+            codeCam.enabled = false;
             concam.enabled = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            //Ryan
-            transform.LookAt(Target);
+            
+            
+            if (pause.GamePause == false)
+            {
+                transform.LookAt(Target);
 
-            Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-            Player.rotation = Quaternion.Euler(0, mouseX, 0);
+                Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
+                Player.rotation = Quaternion.Euler(0, mouseX, 0);
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            
+            
+            
+           
         }
+       
         //RO
         if (conman.conbool == true)
         {
+            UI.SetActive(false);
             cam.enabled = false;
             concam.enabled = true;
+            codeCam.enabled = false;
             Cursor.lockState = CursorLockMode.Confined;
         }
 
@@ -70,13 +84,7 @@ public class Camera : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
 
-        if (keyPad.keypad == false)
-        {
-            UI.SetActive(true);
-            cam.enabled = true;
-            codeCam.enabled = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        
         
         
     }

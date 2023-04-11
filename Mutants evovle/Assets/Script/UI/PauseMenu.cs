@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GamePause = false;
+    public bool GamePause = false;
     public GameObject pauseMenuUI;
     public GameObject UI;
     void Update()
@@ -27,7 +27,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
         GamePause= false;
-        
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     private void Pause()
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GamePause = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void LoadMenu()
