@@ -76,10 +76,12 @@ public class Camera : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
 
+        //Ryan
         if (keyPad.keypad == true)
         {
             UI.SetActive(false);
             cam.enabled = false;
+            concam.enabled = false;
             codeCam.enabled = true;
             Cursor.lockState = CursorLockMode.Confined;
         }

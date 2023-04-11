@@ -22,7 +22,7 @@ public class KeyPad : MonoBehaviour
     {
         if (correct == true)
         {
-            exit.text = "Press Esc";
+            exit.text = "Press Q";
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -35,7 +35,6 @@ public class KeyPad : MonoBehaviour
     public void Number(int number)
     {
         ans.text += number.ToString();
-        print("test");
     }
 
     public void Execute()
