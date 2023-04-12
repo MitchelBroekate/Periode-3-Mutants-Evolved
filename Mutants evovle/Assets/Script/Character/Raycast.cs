@@ -21,7 +21,6 @@ public class Raycast : MonoBehaviour
     public KeyPad keyPad;
     //Ro
     public Animator animator;
-    public Collider door;
     public Material keyshimmer;
     public GameObject keyscan;
     // Start is called before the first frame update
@@ -102,7 +101,8 @@ public class Raycast : MonoBehaviour
                     isKeyInInv = true;
                 }
             }
-
+            
+            //RO
             if (isKeyInInv == true)
             {
                 keyscan.GetComponent<MeshRenderer>().material = keyshimmer;
@@ -110,9 +110,9 @@ public class Raycast : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        animator.SetBool("Dooropen", true);
-                        //RO
-                        door.enabled = false;
+                        animator.SetBool("DoorOpen", true);
+                        
+                        
                     }
                 }
             }
