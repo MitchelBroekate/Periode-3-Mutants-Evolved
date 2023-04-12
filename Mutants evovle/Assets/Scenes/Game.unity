@@ -765,7 +765,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 881998066}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &81250740 stripped
 GameObject:
@@ -5415,6 +5415,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 933c997279922af4885271a6c8e6fd19,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.445
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 933c997279922af4885271a6c8e6fd19,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5649,8 +5654,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6668,8 +6673,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8011,8 +8016,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 158}
-  m_SizeDelta: {x: -593.163, y: -375.1158}
+  m_AnchoredPosition: {x: 0.000061035156, y: 341}
+  m_SizeDelta: {x: -1435.543, y: -855.822}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628278633
 MonoBehaviour:
@@ -8062,8 +8067,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10586,7 +10591,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 881998066}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &861639048
 PrefabInstance:
@@ -10920,9 +10925,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2088599958}
   - {fileID: 856687714}
   - {fileID: 79508001}
-  - {fileID: 2088599958}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12329,6 +12334,7 @@ GameObject:
   - component: {fileID: 1044844791}
   - component: {fileID: 1044844790}
   - component: {fileID: 1044844793}
+  - component: {fileID: 1044844794}
   m_Layer: 0
   m_Name: Abyss
   m_TagString: Untagged
@@ -12415,6 +12421,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1044844794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044844788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3283819f26f2a4d8e0b54b5be569ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1050250081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: efe2f1541a6d6c649bba6533171d72a3,
@@ -12606,6 +12624,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepsound: {fileID: 1050250088}
   animator: {fileID: 1050250086}
+--- !u!114 &1050250090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050250081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665b4bcd5d2e49548b2956fdbba921e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1050250087}
+  checkPoints:
+  - {fileID: 2088599958}
+  - {fileID: 856687714}
+  - {fileID: 79508001}
 --- !u!1001 &1050697242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19772,7 +19807,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: efe2f1541a6d6c649bba6533171d72a3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.078
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: efe2f1541a6d6c649bba6533171d72a3,
         type: 3}
@@ -22598,8 +22633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000066073, y: -129}
-  m_SizeDelta: {x: 237.2047, y: 71.9112}
+  m_AnchoredPosition: {x: 0.0025796, y: -146}
+  m_SizeDelta: {x: 285.28, y: 124.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879587101
 MonoBehaviour:
@@ -22984,8 +23019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -248}
-  m_SizeDelta: {x: 237.2047, y: 71.9112}
+  m_AnchoredPosition: {x: 0.00006881, y: -315}
+  m_SizeDelta: {x: 285.28, y: 117.693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929280993
 MonoBehaviour:
@@ -24546,8 +24581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -16}
-  m_SizeDelta: {x: 237.2047, y: 71.9112}
+  m_AnchoredPosition: {x: -0.0000038147, y: 36}
+  m_SizeDelta: {x: 285.275, y: 147.451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035809066
 MonoBehaviour:
@@ -25052,7 +25087,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 881998066}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2090628805
 GameObject:
@@ -25169,8 +25204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000289917, y: -0.000015258789}
+  m_SizeDelta: {x: 0.00048828, y: 0.000015259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102871927
 MonoBehaviour:
@@ -25220,8 +25255,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
