@@ -11,6 +11,7 @@ public class KeyPad : MonoBehaviour
     public Text exit;
     public string answer = "1234";
     public Animator animator;
+    public Conversationmanager conman;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class KeyPad : MonoBehaviour
         {
             ans.text = "ACCEPTED";            
             correct = true;
+            conman.questint += 1;
         }
         else
         {

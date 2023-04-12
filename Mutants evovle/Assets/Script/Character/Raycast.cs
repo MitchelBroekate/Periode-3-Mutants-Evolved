@@ -23,6 +23,7 @@ public class Raycast : MonoBehaviour
     public Animator animator;
     public Material keyshimmer;
     public GameObject keyscan;
+    public GameObject password;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +80,11 @@ public class Raycast : MonoBehaviour
             if (codeRed & codeGreen & codeYellow & codeBlue == true)
             {
                 codeInInv = true;
+                password.GetComponent<MeshRenderer>().material = keyshimmer;
+                if (conman.questint == 0)
+                {
+                    conman.questint += 1;
+                }
             }
 
             if (codeInInv == true)
@@ -99,6 +105,7 @@ public class Raycast : MonoBehaviour
                 {
                     keyCard.SetActive(false);
                     isKeyInInv = true;
+                    conman.questint += 1;
                 }
             }
             

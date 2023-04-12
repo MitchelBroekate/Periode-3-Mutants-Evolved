@@ -13,21 +13,24 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   questions:
-  - Goed en met jouw?
-  - Ben je op zoek naar de doctor?
-  - Denk er aan god houdt van jouw
-  - Hier neem de keycard hij is door de deur
-  - Hier neem de keycard dan kan je het gebouw door zoeken
-  - Geen probleem hier ik geef je gratis een keycard
-  - Inshallah hij houdt van jouw
+  - Good how about you?
+  - Are you looking for the doctor?
+  - God loves you
+  - Here take the keycard he is through the door
+  - Here take the keycard than you can look around if he is here
+  - No problem. here take a free keycard
+  - Here this keycard will guide you to god
   quests:
+  - Find the 4 papers
+  - Open the door
   - Talk to the Receptionist
-  - Quests done
+  - Grab the keycard
+  - Open the door
   anwsers:
-  - Hey hoe gaat het
-  - Goed!
-  - Slecht..
-  - Ik zoek hem inderdaad
-  - Nee iemand anders
-  - ja dankjewel voor de hulp
-  - Nee sorry
+  - Hey how are you
+  - Good!!
+  - Bad...
+  - Indeed
+  - No for someone else
+  - 'Thank you '
+  - I dont think he does
