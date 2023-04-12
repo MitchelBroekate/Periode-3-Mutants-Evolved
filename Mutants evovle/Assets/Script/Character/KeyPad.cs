@@ -48,7 +48,7 @@ public class KeyPad : MonoBehaviour
         }
         else
         {
-            ans.text = "INCORRECT!";
+            ans.text = "Denied!";
         }
     }
 

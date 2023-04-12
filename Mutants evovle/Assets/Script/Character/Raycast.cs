@@ -7,10 +7,6 @@ public class Raycast : MonoBehaviour
     public Conversationmanager conman;
     // Ryan
     public GameObject keyCard;
-    public GameObject code1;
-    public GameObject code2;
-    public GameObject code3;
-    public GameObject code4;
     //Ryan
     public bool codeRed;
     public bool codeGreen;
@@ -41,7 +37,7 @@ public class Raycast : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    code1.SetActive(false);
+                    hit.transform.gameObject.SetActive(false);
                     print("red1");
                     codeRed = true;
                 }
@@ -51,7 +47,7 @@ public class Raycast : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    code2.SetActive(false);
+                    hit.transform.gameObject.SetActive(false);
                     print("green2");
                     codeGreen = true;
                 }
@@ -61,7 +57,7 @@ public class Raycast : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    code3.SetActive(false);
+                    hit.transform.gameObject.SetActive(false);
                     print("yellow3");
                     codeYellow = true;
                 }
@@ -71,7 +67,7 @@ public class Raycast : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    code4.SetActive(false);
+                    hit.transform.gameObject.SetActive(false);
                     print("blue4");
                     codeBlue = true;                  
                 }

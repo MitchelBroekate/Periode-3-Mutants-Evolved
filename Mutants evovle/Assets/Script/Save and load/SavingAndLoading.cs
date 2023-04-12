@@ -7,7 +7,7 @@ public class SavingAndLoading : MonoBehaviour
 {
     public Transform player;
     public Transform[] checkPoints;
-    float poss;
+    public float poss;
     
     public void Start()
     {
