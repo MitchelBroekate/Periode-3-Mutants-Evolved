@@ -12,9 +12,8 @@ public class SettingsMenu : MonoBehaviour
 
     public AudioMixer audioMixerSFX;
     public AudioMixer audioMixerMusic;
-    public AudioMixer audioMixerDialogue;
 
- 
+
     public void SetVolumeS(float volumeS)
     {
         audioMixerSFX.SetFloat("SFX", volumeS);
@@ -25,12 +24,5 @@ public class SettingsMenu : MonoBehaviour
         audioMixerMusic.SetFloat("Music", volumeM);
 
     }
-    public void SetVolumeD(float volumeD)
-    {
-        audioMixerMusic.SetFloat("Dialogue", volumeD);
-
-    }
-
 
 }
-
