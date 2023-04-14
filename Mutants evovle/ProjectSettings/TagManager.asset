@@ -14,6 +14,11 @@ TagManager:
   - Yellow3
   - Blue4
   - Keycardscanner
+  - Keycard
+  - Code1
+  - Code2
+  - Code3
+  - Code4
   layers:
   - Default
   - TransparentFX

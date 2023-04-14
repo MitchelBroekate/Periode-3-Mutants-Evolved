@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
     public RaycastHit hit;
     public GameObject inventory;
@@ -20,6 +20,7 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
+        Physics.Raycast(transform.position, transform.forward, out hit, 6);
         if (Input.GetKeyDown(KeyCode.Tab))
         { 
             if(ininv == true)
@@ -33,6 +34,10 @@ public class Interaction : MonoBehaviour
                 ininv = true;
             }
         }
+
+
+
+
         if(hit.transform.tag == "Keycard")
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -50,7 +55,8 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
-        if (hit.transform.tag == "Papier (1)")
+
+        if (hit.transform.tag == "Code1")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -67,7 +73,8 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
-        if (hit.transform.tag == "Papier (2)")
+
+        if (hit.transform.tag == "Code2")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -84,7 +91,8 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
-        if (hit.transform.tag == "Papier (3)")
+
+        if (hit.transform.tag == "Code3")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -101,7 +109,8 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
-        if (hit.transform.tag == "Papier (4)")
+
+        if (hit.transform.tag == "Code4")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
