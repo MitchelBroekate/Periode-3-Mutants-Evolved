@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
 
 
 
-        if(hit.transform.tag == "Keycard")
+        if (hit.transform.tag == "Keycard")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
