@@ -6,6 +6,10 @@ public class GroundRespawn : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        other.gameObject.GetComponent<SavingAndLoading>().RestorePosition();
+        if (other.gameObject.transform.tag == "player")
+        {
+            other.gameObject.GetComponent<SavingAndLoading>().RestorePosition();
+        }
+
     }
 }

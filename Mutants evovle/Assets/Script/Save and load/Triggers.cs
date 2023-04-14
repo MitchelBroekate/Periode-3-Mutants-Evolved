@@ -8,6 +8,9 @@ public class Triggers : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<SavingAndLoading>().StorePosition(indexInArray);
+        if (other.gameObject.transform.tag == "player")
+        {
+            other.gameObject.GetComponent<SavingAndLoading>().StorePosition(indexInArray);
+        }
     }
 }
